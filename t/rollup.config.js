@@ -55,7 +55,7 @@ export default {
         }),
         {
             async writeBundle() {
-                await fs.writeFile('404.html', await wri({
+                await fs.writeFile('index.html', await wri({
                     fileContent: readFileSync('./dist/index.html', 'utf-8'),
                     relativeTo: './dist',
                     images: true
@@ -64,7 +64,7 @@ export default {
         },
         process.env.ROLLUP_WATCH && serve({
             open: true,
-            openPage: '/404.html#taraflex',
+            openPage: '/index.html#test',
             contentBase: '',
             historyApiFallback: false,
             host: '127.0.0.1',
