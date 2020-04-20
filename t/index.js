@@ -3,7 +3,7 @@ import './index.scss';
 var label = [location.hash, location.pathname].map(function (v) {
     return v.slice(1)
         .replace(/^(http:|https:)?\/*/i, '')
-        .replace(/^(t\.me)?\/*/i, '');
+        .replace(/^(#)?\/*/i, '');
 }).filter(Boolean)[0];
 if (label) {
     document.getElementById('label').textContent = 't.me/' + label;
